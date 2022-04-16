@@ -22,12 +22,12 @@ public class TestServiceImpl implements TestService {
 
     @Override
     public List<Test> fetchAllTests() {
-        return null;
+        return testRepository.findAllTests();
     }
 
     @Override
     public Test fetchTestById(Integer testId) throws EtResourceNotFoundException {
-        return null;
+        return testRepository.findTestById(testId);
     }
 
     @Override
