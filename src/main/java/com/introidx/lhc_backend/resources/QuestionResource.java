@@ -14,6 +14,7 @@ import java.util.Map;
  * Created by PRAKASH RANJAN on 16-04-2022
  */
 
+@CrossOrigin(origins = {"http://localhost:3000"})
 @RestController
 @RequestMapping("/api/questions")
 public class QuestionResource {
