@@ -1,4 +1,4 @@
-package com.introidx.controlers;
+package com.introidx.lhc_backend.controlers;
 
 import com.introidx.lhc_backend.domain.chat.Message;
 import org.springframework.messaging.handler.annotation.MessageMapping;

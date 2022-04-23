@@ -1,4 +1,4 @@
-package com.introidx.config;
+package com.introidx.lhc_backend.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.CrossOrigin;
