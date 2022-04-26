@@ -6,19 +6,19 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.socket.config.annotation.EnableWebSocketMessageBroker;
 import org.springframework.web.socket.config.annotation.StompEndpointRegistry;
 import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerConfigurer;
+import org.springframework.web.socket.server.support.DefaultHandshakeHandler;
 
 /**
  * Created by PRAKASH RANJAN on 21-04-2022
  */
 
 @Configuration
-@CrossOrigin("*")
 @EnableWebSocketMessageBroker
 public class Config implements WebSocketMessageBrokerConfigurer{
 
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
-        registry.addEndpoint("/api").setAllowedOriginPatterns("*").withSockJS();
+        registry.addEndpoint("/api").setAllowedOriginPatterns("http://localhost:3000").withSockJS();
     }
 
     @Override
@@ -27,5 +27,7 @@ public class Config implements WebSocketMessageBrokerConfigurer{
         registry.enableSimpleBroker("/chatroom","/user");
         registry.setUserDestinationPrefix("/user");
     }
+
+
 
 }
